@@ -25,3 +25,19 @@ RUN make /app
 RUN rm -r $HOME/.cache
 CMD python /app/app.py
 ```
+
+#### Docker Image
+Docker Image is built of read-only stacked layers generated from instructions inside the image's dockerfile. Each layer is a representation of an instruction from the dockerfile. Images are pre-built by developers and are available at Container-Registry, a place to store and download images. One such popular public registry is DockerHub. Some companies also have private registries to store their images confidentially.
+
+#### Docker Container
+Containers are isolated processes which run on a single host machine. Containers consists of packages and dependencies required by your application. We can create, start, stop, delete, move, modify containers which is possible because of a thin writable layer know as 'Container Layer' built on top of immutable read-only image layers. Each container has its own binaries, dependencies, and container-layer therefore each container being an isolated process make them fast, light-weight and more efficient.
+Below is an example of layers structure-
+![Image structure](https://docs.docker.com/storage/storagedriver/images/container-layers.jpg)
+P.S- If user downloads two or more version of same image, docker only builds layer new to version and all the layers which are common won't be downloaded again.
+ 
+We can talk to containers either with Docker API or CLI and perform CRUD operations. 
+
+Containers helps in setting up environment on any OS without worrying about configurations and dependencies, and actually focusing on building applications. Containers being lightweight and portable reduces time required to build environment from scratch.
+
+So what's the catch? Container when deleted or restarted, loses all its data and starts again from its image definition. So when we delete/restart a container the data inside 'container-layer' is lost and it starts from a fresh state. Now if we try to install/restart it again, the container layer is created from scratch not having any history of operations we did inside previous one. How do we solve this? 
+
