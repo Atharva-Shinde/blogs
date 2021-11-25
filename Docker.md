@@ -1,5 +1,9 @@
 #### What is Docker and why is it used?
-Docker is a platform used for building containerised applications. Docker packages a software into a container which contains all its dependencies, libraries, runtimes and other building tools required to run that application on any working environment. Due to its high portability, developers can focus on actual development of the application than worrying about the setup process and its dependencies because of switching workloads. With docker we can manage containers, images, volumes and configure its network. To interact with docker we can either use Docker API or Docker CLI commands. 
+Docker is a tool used for building containerised applications. Docker packages a software which contains all its dependencies, libraries, runtimes and other building tools required to run that application on any working environment into a virtual container. With docker we can manage containers, images, volumes and configure its network. To interact with docker we can either use Docker API or Docker CLI commands. 
+Docker is a platform that allows developers to containerise their software. Docker is supports high portability, which enables containers to run on local systems, virtual machines, cloud providers or hybrid workspace.
+
+#### Why Docker?
+Say, if a developer finds a bug while testing their application, they can easily fix the bug in deploying environment and redeploy the application and validate the fixes. Docker reduces the time required to ship code between workspaces and deploy them into production environment.
 
 ### Docker Architecture
 ![Docker Architecture](https://docs.docker.com/engine/images/architecture.svg)
