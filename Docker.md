@@ -1,6 +1,6 @@
 #### What is Docker?
 Docker is a platform that allows developers to containerise, test, ship applications locally and then conveniently deploy it to production. 
-Docker builds a software unit known as container over our application which mitigates the problem of shipping product to different environment, make it ready for production deployment.
+Docker builds an abstraction layer known as container over our application which mitigates problems like shipping product to different environment, making it ready for production deployments etc.
 With docker, we can run the same application on any working environment without worrying about dependencies and configuration files.
 Moreover 
 
@@ -131,4 +131,6 @@ You now know basic ideology behind Docker and its containers and images. But the
 Lets consider that you have more than 4-5 containers and you want to scale them up, configure their networks, test, deploy and manage them. Some enterprises even have thousands of containers to manage. Managing these many containers is pain. So there needs to be a tool that manages deploys, scale and basically take care of our containers.
 That's where Container Orchestration comes in picture. Container Orchestration deploys, scales, removes, checks container health, load balances the traffic and manages all the containers.
 And the most widely used Container Orchestration tool is Kubernetes. 
+
+So now you know where to go next.
  
