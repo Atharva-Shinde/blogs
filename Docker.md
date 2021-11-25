@@ -1,16 +1,8 @@
 #### What is Docker?
-Docker is a platform that allows developers to containerise, test, ship applications locally and then conveniently deploy it to production. 
-Docker builds an abstraction layer known as container over our application which mitigates problems like shipping product to different environment, making it ready for production deployments etc.
-With docker, we can run the same application on any working environment without worrying about dependencies and configuration files.
-Moreover 
+Docker is a platform that allows developers to containerise, build, test, deploy, ship applications seamlessly within multiple workspaces and making it ready for production deployments.
 
 #### Why Docker?
-Docker provides a streamline control over container workloads.
-Docker helps in shipping, deploying, testing and managing your application, because of which you can run your application on any environment.
-With its simple CLI commands we can easily build, delete, deploy and manage containerised images in your local machine and easily ship them to production ready deployments.
-Docker being lightweight portable makes it a cost-effective alternative to virtual machines. 
-
-Moreover these containers are highly portable which enables them to be able to run on local systems, virtual machines, cloud providers or hybrid workspaces.
+Docker streamlines the development processes by letting us have control over the workloads. Using docker-based containerised application we can easily ship codebase within different systems/environments without need to worry about setting up libraries and all other configuration files from scratch. Docker also helps in deploying, testing and managing your application, which makes it easy to develop production ready applications. With its simple CLI commands we can easily build, delete, deploy and manage containerised images in our local machine. Docker being lightweight portable makes it a cost-effective alternative to hypervisor virtual machines. Moreover these containers are highly portable which enables them to be able to run on local systems, virtual machines, cloud providers or hybrid workspaces. So if you need fast, efficient and orchestrated way to run, scale, deploy or test your application/software on one or more virtualised/physical systems, Docker is your solution.
 
 ### Docker Architecture
 ![Docker Architecture](https://docs.docker.com/engine/images/architecture.svg)
