@@ -1,13 +1,14 @@
 
 
 #### What is Docker?
-Docker is a platform that allows developers to containerise, build, test, deploy, ship applications much faster within multiple workspaces and making it ready for production deployments. Docker wraps your application inside an abstraction called container which helps in making your development workflow quick and easier.
+Docker is a platform that allows developers to containerise, build, test, deploy, ship applications much faster within multiple workspaces and delivering production ready applications. Docker wraps your application inside an abstraction called container which makes your development workflow quick and easier.
 
 #### Why Docker?
-Docker streamlines the development processes by letting developers have control over managing, scaling and building applications. Docker being lightweight and portable makes it a cost-effective alternative to hypervisor virtual machines.
+If you need streamlined, fast, lightweight, efficient and orchestrated way to run, scale, deploy or test your application/software on one or more virtualised/physical systems, Docker is your solution.
+Docker being lightweight and portable makes it a cost-effective alternative to hypervisor virtual machines.
 ![Docker and hypervisors](https://www.docker.com/sites/default/files/d8/2018-11/docker-containerized-and-vm-transparent-bg.png)
 With its simple CLI commands we can easily build, delete, deploy and manage containerised images on our machines. Moreover these containers are highly portable which enables them to be able to run on local systems, virtual machines, cloud providers or even in hybrid workspaces without worrying about setting up libraries and all other configuration files.
-So if you need fast, lightweight, efficient and orchestrated way to run, scale, deploy or test your application/software on one or more virtualised/physical systems, Docker is your solution.
+
 
 
 #### Docker Architecture
@@ -135,3 +136,9 @@ So now you know what to explore next!
 
 Connect with me here https://about.me/atharvashinde
 :)
+
+
+
+
+
+ 
