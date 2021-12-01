@@ -1,14 +1,18 @@
+Ever tried running your code to a different workspace but it broke out in other systems? Docker is here to ease your work, and not just for locally sharing your codebase but much more!
+
+
 #### What is Docker?
-Docker is a platform that allows developers to containerise, build, test, deploy, ship applications seamlessly within multiple workspaces and making it ready for production deployments.
+Docker is a platform that allows developers to containerise, build, test, deploy and ship applications seamlessly within multiple workspaces and making it ready for production deployments.
 
 #### Why Docker?
-Docker streamlines the development processes by letting us have control over the workloads. Using docker-based containerised application we can easily ship codebase within different systems/environments without need to worry about setting up libraries and all other configuration files from scratch. Docker also helps in deploying, testing and managing your application, which makes it easy to develop production ready applications. With its simple CLI commands we can easily build, delete, deploy and manage containerised images in our local machine. Docker being lightweight portable makes it a cost-effective alternative to hypervisor virtual machines. Moreover these containers are highly portable which enables them to be able to run on local systems, virtual machines, cloud providers or hybrid workspaces. So if you need fast, efficient and orchestrated way to run, scale, deploy or test your application/software on one or more virtualised/physical systems, Docker is your solution.
+Docker streamlines the development processes by letting us have control over managing workloads. Using docker-based containerised application we can easily ship codebase within different systems/environments without need to worry about setting up libraries and all other configuration files from scratch. With its simple CLI commands we can easily build, delete, deploy and manage containerised images in our local machine. Docker being lightweight and portable makes it a cost-effective alternative to hypervisor virtual machines. Moreover these containers are highly portable which enables them to be able to run on local systems, virtual machines, cloud providers or hybrid workspaces. So if you need fast, lightweight, efficient and orchestrated way to run, scale, deploy or test your application/software on one or more virtualised/physical systems, Docker is your solution.
+
 
 ### Docker Architecture
 ![Docker Architecture](https://docs.docker.com/engine/images/architecture.svg)
 
-Docker implements client-server architecture. So what is client-server architecture? Consider Online Shopping. You (the client) orders some product from app-store and the service-provider (server) places the order, takes necessary actions and ships it to your address. Client requests a service and server side works on it and provides the service product.
-Referencing the above diagram, if user wants to create a container from one of the installed images and therefore enters its corresponding `docker run` command, docker daemon responds to the request and gives us a configured virtualised container along with its metadata.
+Docker implements client-server architecture. So what is client-server architecture? Consider Online Shopping. You (the client) order some product from app-store and the service-provider (server) places the order, takes necessary actions and ships it to your address. That is client requests a service and the service provider works on the requests and provides the desired state.
+Referring the above diagram, if user wants to create a container from one of the installed images and therefore enters its corresponding `docker run` command, docker daemon responds to the request and gives us a configured virtualised container along with its configurations.
 
 ### What is Docker Daemon?
 Daemon is a program that runs consistently in the background and responds to particular request, and is not under any direct control of user, that means user cannot change the nature of program. Usually daemon files/processes names are suffixed by 'd', for example:- *sshd, mysqld, dockerd.*
