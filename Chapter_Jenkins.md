@@ -24,5 +24,8 @@ to install Jenkins on your local setup read [Jenkins official download guide](ht
 To install Jenkins as a container from Jenkins Docker image execute-
 `docker pull jenkins/jenkins:lts-jdk11`
 
+#### Jenkins Pipeline
+Jenkins Pipeline is a collective of plugins which supports tools for implementing 
+
 #### Alternative to Jenkins
 CircleCI
