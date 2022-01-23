@@ -20,8 +20,9 @@ Jenkins is a versatile automation server for building, testing and deploying sof
 #### Installing Jenkins
 to install Jenkins on your local setup read [Jenkins official download guide](https://www.jenkins.io/download/)
 
-#### Jenkinsfile
-
+##### Installing Jenkins as a container
+To install Jenkins as a container from Jenkins Docker image execute-
+`docker pull jenkins/jenkins:lts-jdk11`
 
 #### Alternative to Jenkins
 CircleCI
