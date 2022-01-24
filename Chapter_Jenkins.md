@@ -27,5 +27,37 @@ To install Jenkins as a container from Jenkins Docker image execute-
 #### Jenkins Pipeline
 Jenkins Pipeline is a collective of plugins which supports tools for implementing 
 
+We can create our pipeline either inside a JenkinsFile or Jenkins User Interface in two ways
+
+- Scripted Pipeline
+
+These pipelines are initiated with syntax `node`
+Here's an example structure of Scripted Pipeline-
+
+```
+node{
+    stage('Build'){
+        try{
+        }
+        catch(e){
+        }
+    }
+    stage('Test'){
+        if(condition){
+        }
+        else{
+        }
+    }
+    stage('Deploy'){
+    }
+}
+```
+
+- Declarative Pipeline
+
+These pipelines are initiated with syntax `pipeline`
+Here's an example structure of a mix: parallel and non-parallel declarative pipeline.
+
+
 #### Alternative to Jenkins
 CircleCI
