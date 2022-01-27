@@ -86,7 +86,8 @@ Just like the `parallel` keyword there are many others available for discrete fu
 
 - `when` - It allows the Pipeline to decide whether the stage should be executed a depending on the given condition.
 eg: `when{ branch main}`
-- `stage` - To define 
+- `stage` - This directive can comprise of one or more directives collectively used to define-build a particular process of development cycle. 
+Example: `stage('Test'){...}` the stage 'Test' would consist of set of instructions that would trigger every time any code is being sent for testing.
 - `tools` - This directive is used to define tools to auto-install 
 
 
