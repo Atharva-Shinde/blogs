@@ -58,6 +58,37 @@ node{
 These pipelines are initiated with syntax `pipeline`
 Here's an example structure of a mix: parallel and non-parallel declarative pipeline.
 
+```
+pipeline{
+    stages{
+        stage('Build'){
+            steps{
+            }
+        }
+        stage('TestAndDeploy'){
+            parallel{
+                stage('Test'){
+                    steps{
+                    }
+                }
+                stage('Deploy'){
+                    steps{
+                    }
+                }
+            }
+        }
+    }
+}
+```
+in the above pipeline stage('Build') is executed first and stages: stage('Test') & stage('Deploy') are run in parallel because of the `parallel` directive.
+
+Just like the `parallel` keyword there are many others available for discrete functionalities, these keywords are called Directives; a few to mention are:
+
+- `when` - It allows the Pipeline to decide whether the stage should be executed a depending on the given condition.
+eg: `when{ branch main}`
+- `stage` - To define 
+- `tools` - This directive is used to define tools to auto-install 
+
 
 #### Alternative to Jenkins
 CircleCI
