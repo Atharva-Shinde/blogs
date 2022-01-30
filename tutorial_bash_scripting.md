@@ -4,6 +4,7 @@ I'll be using terminal to write my script, you can code yours using VSCode or ot
 Those who are familiar with coding quickly create a file with extension `.sh`, open your file in your IDE and skip to Step 4
 
 Others follow along from Step 1
+
 1. 
 Open terminal and change your directory to where you want to keep your Bash script using `cd`, I want to keep my script on my Desktop, so.
 
