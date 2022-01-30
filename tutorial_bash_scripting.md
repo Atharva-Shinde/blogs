@@ -50,9 +50,9 @@ Now to display a introductory message with a freeze time of 5 seconds write
 
 ```
 echo "Hello"
-echo "$(sleep 5) My name is Cherry, and what's yours?"
+echo "$(sleep 3) My name is Cherry, and what's yours?"
 ``` 
-The message Hello is followed by a freeze time of 5 seconds and then the message: "My name is Cherry, and what's yours?" is displayed
+The message Hello is followed by a freeze time of 3 seconds and then the message: "My name is Cherry, and what's yours?" is displayed
 
 > To check if the script you've created is working: Save the file and simply open a new terminal window and be sure you are in the same directory where your file is present, in my case I'll check if I'm in Desktop directory, and type -
 ```
@@ -68,5 +68,17 @@ read name
 echo "Hey $name, it's nice to have you here!"
 ```
 read is a built-in command that converts the content on the line to a variable, and we use that variable to display a message using $ symbol.
+
+-----
+Your script till now should look similar to-
+
+```
+#! /bin/bash
+echo "Hello"
+echo "$(sleep 3) My name is Cherry, and what's yours?"
+read name
+echo "Hey $name, it's nice to have you here!"
+``` 
+-----
 
 7.
