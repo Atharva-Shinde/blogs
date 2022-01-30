@@ -32,6 +32,7 @@ Note: If you are using vim, To write : enter `i`, to stop writing/editing: press
 Again Note: Here I'm using Vim terminal but you can open your .sh file in your preferred IDE (VSCode etc) and code along.
 
 Let's Start Scripting!!!!
+
 4. 
 The first line should start with a syntax: **Shebang*  followed by the path where interpreter i(n this case Bash) is located on your machine.
 
