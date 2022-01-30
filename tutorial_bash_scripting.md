@@ -52,4 +52,21 @@ Now to display a introductory message with a freeze time of 5 seconds write
 echo "Hello"
 echo "$(sleep 5) My name is Cherry, and what's yours?"
 ``` 
-The message Hello is 
+The message Hello is followed by a freeze time of 5 seconds and then the message: "My name is Cherry, and what's yours?" is displayed
+
+> To check if the script you've created is working: Save the file and simply open a new terminal window and be sure you are in the same directory where your file is present, in my case I'll check if I'm in Desktop directory, and type -
+```
+bash (your_file_name.sh)
+``` 
+
+6.
+Now to accept the input for "... and what's yours?".
+Go again to your vim terminal or IDE and continue typing
+
+```
+read name
+echo "Hey $name, it's nice to have you here!"
+```
+read is a built-in command that converts the content on the line to a variable, and we use that variable to display a message using $ symbol.
+
+7.
