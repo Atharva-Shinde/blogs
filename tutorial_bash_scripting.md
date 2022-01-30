@@ -41,27 +41,33 @@ The first line should start with a syntax: **Shebang*  followed by the path wher
 
 *Shebang is a keyword for the syntax `#!`
 
-That means your file now should look similar to
+Your file now should look similar to
 
 ```
 #! /bin/bash
 ``` 
 
 5.
-Now to display a introductory message with a freeze time of 5 seconds write
+```
+echo "You are logged in as $(whoami)"
+``` 
+`$(whoami)` displays the current username of your machine.
+
+6.
+Now to display an introductory message with a freeze time of 2 seconds write
 
 ```
-echo "Hello"
-echo "$(sleep 3) My name is Cherry, and what's yours?"
+echo "Hello!!!"
+echo "$(sleep 2) My name is Cherry, and what's yours?"
 ``` 
-The message Hello is followed by a freeze time of 3 seconds and then the message: "My name is Cherry, and what's yours?" is displayed
+The message Hello is followed by a freeze time of 2 seconds and then the message: "My name is Cherry, and what's yours?" is displayed
 
 > To check if the script you've created is working: Save the file and simply open a new terminal window and be sure you are in the same directory where your file is present, in my case I'll check if I'm in Desktop directory, and type -
 ```
 bash (your_file_name.sh)
 ``` 
 
-6.
+7.
 Now to accept the input for "... and what's yours?".
 Go again to your vim terminal or IDE and continue typing
 
@@ -72,15 +78,30 @@ echo "Hey $name, it's nice to have you here!"
 read is a built-in command that converts the content on the line to a variable, and we use that variable to display a message using $ symbol.
 
 -----
-Your script till now should look similar to-
+Your script till now should look like-
 
 ```
 #! /bin/bash
+
+echo "You are logged in as $(whoami)"
 echo "Hello"
-echo "$(sleep 3) My name is Cherry, and what's yours?"
+echo "$(sleep 2) My name is Cherry, and what's yours?"
 read name
 echo "Hey $name, it's nice to have you here!"
 ``` 
 -----
 
-7.
+8. 
+
+```
+echo " $(sleep 3) Choose between options (type your option letter):"
+echo -e "Question 1: What would you prefer:\na] Staying at home\nb] At outings "
+read answer1
+echo -e "Question 2: Where would you prefer to live rest of your life:\na]In a dense forest b]Centre of New-York City" 
+read answer2
+echo -e "Question 2: Where would you prefer to live rest of your life:\na]In a dense forest b]Centre of New-York City" 
+read answer2
+``` 
+
+
+
