@@ -57,41 +57,20 @@ echo "You are logged in as $(whoami)"
 Now to display an introductory message with a freeze time of 2 seconds write
 
 ```
-echo "Hello!!!"
-echo "$(sleep 2) My name is Cherry, and what's yours?"
+echo "Hello!!!!"
+read -p "$(sleep 2) My name is Cherry, and what's yours? -" name
 ``` 
-The message Hello is followed by a freeze time of 2 seconds and then the message: "My name is Cherry, and what's yours?" is displayed
+The message Hello is followed by a freeze time of 2 seconds and then the prompt: "My name is Cherry, and what's yours?" is displayed.
 
-> To check if the script you've created is working: Save the file and simply open a new terminal window and be sure you are in the same directory where your file is present, in my case I'll check if I'm in Desktop directory, and type -
+`read` is a built-in command that converts the content on the line to a "variable", and we use that variable to display a message using $ symbol.
+`-p` is a keyword for accepting prompt message, this allows user to write their input on the same line and the result is stored in "variable" `name`
+
+> To check if the script you've created is working: Save the file and simply open a new terminal window and be sure you are in the same directory where your file is present, in my case I'll check if I'm in my Desktop directory, and type -
 ```
 bash (your_file_name.sh)
 ``` 
 
-7.
-Now to accept the input for "... and what's yours?".
-Go again to your vim terminal or IDE and continue typing
-
-```
-read name
-echo "Hey $name, it's nice to have you here!"
-```
-read is a built-in command that converts the content on the line to a variable, and we use that variable to display a message using $ symbol.
-
------
-Your script till now should look like-
-
-```
-#! /bin/bash
-
-echo "You are logged in as $(whoami)"
-echo "Hello"
-echo "$(sleep 2) My name is Cherry, and what's yours?"
-read name
-echo "Hey $name, it's nice to have you here!"
-``` 
------
-
-8. 
+7. 
 
 ```
 echo " $(sleep 3) Choose between options (type your option letter):"
@@ -103,5 +82,71 @@ echo -e "Question 2: Where would you prefer to live rest of your life:\na]In a d
 read answer2
 ``` 
 
+7. 
+Time for some Iterations:
+
+We are writing a script where user can either answer life questions asked by Cherry or play a trivia.
+```
+read -p "You know what, I am curious about human life, maybe you can help me with that, what say? If no you can play a trivia " answer
+
+while true; do
+  case $answer in
+    # case 1 
+    Yes | yeah | yes | YES | Y | y  ) echo "$(sleep 1) Wohoo thanks for accepting my request"
+    break;;
+   # case 2
+    no | No | NO | N | n | trivia ) echo "$(sleep 1)ok, let's have a trivia!!!"
+    break;;
+    #case 3
+    exit ) echo"You've exited successfully"
+    exit 0;;
+    # default
+    * ) echo "choose either one by saying yes or no"
+    break;;
+  esac
+done
+``` 
+In the above code we run case statements  inside do-while loop which checks whether user have typed yes, no or exited the program. 
+If any one of the case statement is fulfilled, our script prints its respective message and breaks out of the iteration.
+In Bash we need to declare a closing syntax after every iteration, thus the keywords `esac`: for case statement and `done`: for do-while loop.
+
+I used case-statements for easy-understanding of what exactly is happening inside the script. If user wants to play trivia and therefore types `n` or `trivia` or ` NO`, case 2 is triggered and the message `ok, let's have a trivia!!!` is displayed.
+
+-----
+Your script now should look like-
+
+```
+#! /bin/bash
+
+echo "You are logged in as $(whoami)"
+echo "Hello!!!!"
+read -p "$(sleep 2) My name is Cherry, and what's yours? -" name
+echo "Hey $name, it's nice to have you here!"
+
+read -p "You know what, I am curious about human life, maybe you can help me with that, what say? If no you can play a trivia " answer
+
+while true; do
+  case $answer in
+    # case 1 
+    Yes | yeah | yes | YES | Y | y ) echo "$(sleep 1) Wohoo thanks for accepting my request"
+    break;;
+   # case 2
+    no | No | NO | N | n | trivia ) echo "$(sleep 1)ok, let's have a trivia!!!"
+    break;;
+    #case 3
+    exit ) echo"You've exited successfully"
+    exit 0;;
+    # default
+    * ) echo "choose either one by saying yes or no"
+    break;;
+  esac
+done
+``` 
+-----
+
+8. Let's write code for if user decides to go with Cherry's request.
 
 
+```
+if[$answer =]
+``` 
