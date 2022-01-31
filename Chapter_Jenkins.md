@@ -19,13 +19,6 @@ Jenkins is a versatile automation server developed completely in Java for automa
 4. Create roles for each responsibility and manage what to hide from users and what they could read and/or write to.
 5. Build your own automation tools using wide range of plugins available at https://plugins.jenkins.io
 
-Few examples of plugins-
-GitHub Groovy Library, GitHub Branch Source Plugin, SSH Build Agents, LDAP, Credentials Binding Plugin, OWASP Markup Formatter, Ant, Gradle, PAM Authentication.
-
-
-#### Jenkins Architecture
-
-
 #### Installing Jenkins
 to install Jenkins on your local setup read [Jenkins official download guide](https://www.jenkins.io/download/)
 
@@ -33,6 +26,20 @@ to install Jenkins on your local setup read [Jenkins official download guide](ht
 To install Jenkins as a container from Jenkins Docker image execute-
 `docker pull jenkins/jenkins:lts-jdk11`
 
+#### Jenkins Model
+Here's a high level view of Jenkins application
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yylk5vya4dth0gc5kjy8.png)
+
+#### Components of Jenkins
+- Plugins
+- Jenkins Pipeline
+- JenkinsFile
+- BlueOcean
+
+#### Plugins
+Plugins are extensions developed by awesome Jenkins community. Plugins are like upgrades on top of Jenkins local environment that provides us with variety of tools for analysing, testing, notifications etc and these plugins can be installed using Jenkins Plugin UI or Plugins CLI.
+Few examples of plugins are-
+GitHub Groovy Library, GitHub Branch Source Plugin, SSH Build Agents, LDAP, Credentials Binding Plugin, OWASP Markup Formatter, Ant, Gradle, PAM Authentication.
 
 #### Jenkins Pipeline
 Jenkins Pipeline is a collective of plugins for creating declarative automations. 
@@ -48,8 +55,7 @@ We can create a pipeline's JenkinsFile inside Jenkins User Interface or using So
 2. Declarative Pipeline(relatively new)
 
 
-- 
-Scripted Pipeline:
+- Scripted Pipeline:
 These pipelines are initiated with the directive `node`.
 Here's an example structure of Scripted Pipeline-
 
@@ -72,8 +78,7 @@ node{
 }
 ```
 
-- 
-Declarative Pipeline:
+- Declarative Pipeline:
 These pipelines are initiated with syntax `pipeline`
 Here's an example structure of a mix: parallel and non-parallel declarative pipeline.
 
