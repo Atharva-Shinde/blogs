@@ -22,13 +22,13 @@ Jenkins is a versatile automation server developed completely in Java for automa
 #### Installing Jenkins
 to install Jenkins on your local setup read [Jenkins official download guide](https://www.jenkins.io/download/)
 
-##### Installing Jenkins as a container
+##### Installing Jenkins as a container inside Docker.
 To install Jenkins as a container from Jenkins Docker image execute-
 `docker pull jenkins/jenkins:lts-jdk11`
 
 #### Jenkins Model
 Here's a high level view of Jenkins application
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yylk5vya4dth0gc5kjy8.png)
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yylk5vya4dtngh0gc5kjy8.png)
 
 #### Components of Jenkins
 - Plugins
@@ -37,12 +37,36 @@ Here's a high level view of Jenkins application
 - BlueOcean
 
 #### Plugins
-Plugins are extensions developed by awesome Jenkins community. Plugins are like upgrades on top of Jenkins local environment that provides us with variety of tools for analysing, testing, notifications etc and these plugins can be installed using Jenkins Plugin UI or Plugins CLI.
+A Plugin is an extension tool to help streamline the process of building, testing or deploying a software. There are more than 1800 plugins available built for frictionless development such as analysing or testing the codebase, sending custom notifications of test or build results to developers, integrate Git with Jenkins and many more.   We can install more than one plugins on top of our Jenkins local environment to implement these different functionalities that increases the efficacy of CI/CD process. These plugins are built by awesome developers of Jenkins Open-source community and you can browse all these plugins and their information on https://plugins.jenkins.io/
+
 Few examples of plugins are-
-GitHub Groovy Library, GitHub Branch Source Plugin, SSH Build Agents, LDAP, Credentials Binding Plugin, OWASP Markup Formatter, Ant, Gradle, PAM Authentication.
+GitHub Groovy Library, GitHub Branch Source Plugin, SSH Build Agents, LDAP, Credentials Binding Plugin, OWASP Markup Formatter, PAM Authentication.
+
+Plugins are like upgrades  which can be installed using-
+
+- **"Plugin Manager" in the web User Interface. **
+![Manage Plugin through Web UI](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/oagvx6ggyuq380gb1zlk.png)
+
+- **Jenkins Command Line Interface.**
+
+```
+java -jar jenkins-cli.jar -s http://localhost:8080/ install-plugin SOURCE ... [-deploy] [-name VAL] [-restart]
+``` 
+Installs a plugin either from a file, an URL, or from update center.
+
+ SOURCE    : If this points to a local file, that file will be installed. If
+             this is an URL, Jenkins downloads the URL and installs that as a
+             plugin.Otherwise the name is assumed to be the short name of the
+             plugin in the existing update center (like "findbugs"),and the
+             plugin will be installed from the update center.
+ -deploy   : Deploy plugins right away without postponing them until the reboot.
+ -name VAL : If specified, the plugin will be installed as this short name
+             (whereas normally the name is inferred from the source name
+             automatically).
+ -restart  : Restart Jenkins upon successful installation.
 
 #### Jenkins Pipeline
-Jenkins Pipeline is a collective of plugins for creating declarative automations. 
+Jenkins Pipeline is set of plugins used for creating declarative automations. We can visualise Jenkins Pipeline as a collection of tools like analysing, testing or getting notifications etc. which are installed to make the software-delivery i.e CI/CD process easier. 
 
 #### JenkinsFile
 To define an automated process for our Jenkins Pipeline we need write the steps inside a text file called `JenkinsFile`.
@@ -55,7 +79,7 @@ We can create a pipeline's JenkinsFile inside Jenkins User Interface or using So
 2. Declarative Pipeline(relatively new)
 
 
-- Scripted Pipeline:
+- **Scripted Pipeline:**
 These pipelines are initiated with the directive `node`.
 Here's an example structure of Scripted Pipeline-
 
@@ -78,9 +102,9 @@ node{
 }
 ```
 
-- Declarative Pipeline:
+- **Declarative Pipeline:**
 These pipelines are initiated with syntax `pipeline`
-Here's an example structure of a mix: parallel and non-parallel declarative pipeline.
+Here's an example structure of a combination of: parallel and non-parallel declarative pipeline.
 
 ```
 pipeline{
@@ -114,6 +138,8 @@ Example: `when{ branch main}`
 - `stage` - This directive can comprise of one or more directives collectively used to define-build a particular process of development cycle. 
 Example: `stage('Test'){...}` the stage 'Test' would consist of set of instructions that would trigger every time any code is being sent for testing.
 - `tools` - It is used to define tools to auto-install for Jenkins server.
+
+
 
 #### Alternative to Jenkins
 CircleCI
