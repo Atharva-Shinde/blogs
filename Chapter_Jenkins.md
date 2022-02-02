@@ -3,14 +3,14 @@ Want to get notifications instantly when your code broke? Need some tool to inte
 
 #### Nah, explain further.
 
-![Traditional Software Delivery Process](https://cdn.hashnode.com/res/hashnode/image/upload/v1643816661439/CV4B8W-paF.png)
+![Traditional Software Delivery Process](https://cdn.hashnode.com/res/hashnode/image/upload/v1643820828086/51SRh_LMhZ.png)
 
 Above shown is a raw process on how development cycle worked traditionally. Consider your team working on a new functionality for an application and you want to have it deployed to the upcoming release version. Initially you push your code to a version control system like Github, BitBucket or your company's private VC system. All the manual work ends here. Now starts the integration and delivery.
 The problem here is the build process takes a considerable amount of time, in fact development teams had a custom nightly build convention where all the build process were scheduled at night, but 'nightly' build was relative of different time-zones. Lets say, a company decides for night build of 12:30AM EST, the build would be 10:30AM IST and 4:00PM AEST and therefore all developers had to commit their code for build at their respective timezones which affected productivity of developers in IST and AEST region as they had to wait till the build and test was completed.
 Also if the code broke and the tests failed were no ascertain means to pick-point which team or particularly who wrote that piece of code.
 
 #### So?
-Jenkins is a versatile automation server completely built in Java, for integrating the workflow of building, testing and deploying software. Jenkins transitioned the traditional software delivery cycle to a fast, extensive and customisable CI/CD process. Because of Jenkins its possible to
+Jenkins is an open-source versatile automation server completely built in Java, for integrating the workflow of building, testing and deploying a software. Jenkins transitioned the traditional software delivery cycle to a fast, extensive and customisable CI/CD process. With the help of Jenkins its possible to-
 
 1. Get instant build notifications every-time code is pushed to the repository.
 2. Test the built code on wide range of test combinations for achieving maximum test-coverage and statistical data on how the code performed for each test-input.
@@ -18,11 +18,15 @@ Jenkins is a versatile automation server completely built in Java, for integrati
 4. Create roles for each responsibility and manage what to hide for each role on what they could read and/or write to.
 5. Build your own automation tools using wide range of plugins available at https://plugins.jenkins.io
 
+This is how Jenkins helped in rejuvenating to a frictionless CI/CD process.
+
+![New Software Delivery Process](https://cdn.hashnode.com/res/hashnode/image/upload/v1643820645462/kI5vLRmRA.png)
+
 #### Installing Jenkins
-to install Jenkins on your local setup read [Jenkins official download guide](https://www.jenkins.io/download/)
+To install Jenkins on your local setup read [Jenkins official download guide](https://www.jenkins.io/download/)
 
 ##### Installing Jenkins as a container inside Docker.
-To install Jenkins as a container from Jenkins Docker image execute-
+To install Jenkins as a container from Jenkins Docker image, execute-
 `docker pull jenkins/jenkins:lts-jdk11`
 
 #### Jenkins Model
@@ -75,24 +79,24 @@ To define the software delivery pipeline we need to write the steps inside a tex
 
 ![JenkinsFile](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tiqyrk40m7o6skykucnz.png)
 
-We can build your Pipeline's JenkinsFile through, either of
+We can build your Pipeline's JenkinsFile through either-
 
 
 - Jenkins User Interface
 
 ![Jenkins User Interface](https://cdn.hashnode.com/res/hashnode/image/upload/v1643806568720/qyFHQa9rj.png)
  
- 
+ or
 - BlueOcean User Interface 
 
 ![BlueOcean User Interface ](https://cdn.hashnode.com/res/hashnode/image/upload/v1643806377667/DCLcMwY6i.png)
  
-
+or
 - Using Source Code Management (SCM)
 
 ![Using Source Code Management (SCM)](https://cdn.hashnode.com/res/hashnode/image/upload/v1643807322190/JXZBsLRTXw.png)
 
-And to code the JenkinsFile  we can use either of the two syntaxes:
+And to code the JenkinsFile we can use either of the two syntaxes:
 
 1. Scripted Pipeline(must be written in [Groovy ](http://groovy-lang.org/semantics.html))
 2. Declarative Pipeline
