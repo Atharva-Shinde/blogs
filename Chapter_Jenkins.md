@@ -20,7 +20,7 @@ Jenkins is an open-source versatile automation server completely built in Java, 
 
 This is how Jenkins helped in rejuvenating to a frictionless CI/CD process.
 
-![New Software Delivery Process](https://cdn.hashnode.com/res/hashnode/image/upload/v1643820645462/kI5vLRmRA.png)
+![New Software Delivery Process](https://cdn.hashnode.com/res/hashnode/image/upload/v1643821329408/818IzDtLr.png)
 
 #### Installing Jenkins
 To install Jenkins on your local setup read [Jenkins official download guide](https://www.jenkins.io/download/)
@@ -164,4 +164,4 @@ Example: `stage('Test'){...}` the stage 'Test' would consist of set of instructi
 
 
 #### Alternative to Jenkins
-CircleCI
+Circ
