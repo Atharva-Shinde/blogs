@@ -134,16 +134,10 @@ That's where Container Orchestration comes in picture. Container Orchestration d
 So now you know what to explore next!
 
 
-Thank you for taking time to read my article :)
+`Thank you for taking time to read my article :)`
 
-#### Do connect with me on- 
+** Do connect with me on- 
 [Twitter](https://twitter.com/atharvashinde_), 
 [GitHub](https://github.com/Atharva-Shinde), and
 [LinkedIn](https://www.linkedin.com/in/atharva-shinde-6468b4205/)
-
-
-
-
-
-
- 
+**
