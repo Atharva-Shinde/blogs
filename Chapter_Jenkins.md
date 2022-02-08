@@ -168,6 +168,9 @@ Here are few other CI/CD tool options to Jenkins with each having its own advant
 
 `Reference`: Jenkins Documentation
 
+#### What next?
+Now that you are aware of Jenkins as a next step you might need to containerise your application. Containerising your application helps in shipping your application to different systems without worrying about dependencies, scaling and even deploying your application faster. I have made a detailed "Guide to Docker" so check that out!
+
 Thank you for taking time to read my article :)
 
 #### Do connect with me on- 
