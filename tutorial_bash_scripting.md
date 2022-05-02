@@ -144,9 +144,9 @@ done
 ``` 
 -----
 
-8. Let's write code for if user decides to go with Cherry's request.
+<!-- 8. Let's write code for if user decides to go with Cherry's request.
 
 
 ```
 if[$answer =]
-``` 
+```  -->
