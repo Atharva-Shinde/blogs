@@ -5,12 +5,17 @@ Prometheus:- `docker run -p 9090:9090 prom/prometheus`
 Grafana:-`docker run -d -p 3000:3000 grafana/grafana-enterprise`
 
 ## Start server
-Prometheus:- http://*your_machine_ip*:9090
-Grafana:- http://*your_machine_ip*/3000
+Prometheus:- http://localhost:9090
+Grafana:- http://localhost:3000
 
-Note: Dont use `localhost` as the hostname instead use your machine's ip address, because prometheus container or host cannot be used to connect to grafana container
+Note: If you have Docker Compose seperately installed, `localhost` or `127.0.0.1` probably won't work, instead use your machine's ip address.
 
-## blackbox metrics exporter
+## Understanding metrics
+
+
+## Integrating metrics
+
+### blackbox metrics exporter
 ```
 - job_name: 'blackbox'
     metrics_path: /metrics
@@ -28,7 +33,7 @@ Note: Dont use `localhost` as the hostname instead use your machine's ip address
         replacement: *your_ip_address*:9115  # The blackbox exporter's real hostname:port.
 ```
         
-if config setup is succesful then all the metrics blackbox exporter has to offer will be hosted on http://*your_ip_address*:9115
+if config setup is succesful then all the metrics blackbox exporter has to offer will be hosted on http://localhost:9115
 ![](https://i.imgur.com/4YMQhgO.jpg)
 
 
@@ -39,7 +44,7 @@ These are the metrics that are exported through blackbox to prometheus
 
 ## Connecting Grafana with Prometheus
 
-We need to configure the data-source of prometheus with the grafana service so that grafana can query the data from  the prometheus server.
+Configure the data-source of prometheus with the grafana service so that grafana can query the data from the local prometheus server.
 
 Steps
 Create new data source
