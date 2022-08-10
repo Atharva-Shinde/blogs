@@ -11,6 +11,15 @@ Grafana:- http://localhost:3000
 Note: If you have Docker Compose seperately installed, `localhost` or `127.0.0.1` probably won't work, instead use your machine's ip address.
 
 ## Understanding metrics
+Metrics are numeric measurements
+
+## Instrumenting code
+In order for Prometheus to scrape metrics from a service, the service must satisfy the format and structure needed to export the metrics to prometheus.
+
+## Exporters
+
+Exporters are binaries that acts as a middleware which converts the metrics exposed by any 3rd party application/software into a format that prometheus can understand and scrape through their metrics. Examples: NodeExporter, cAdvisor
+We can develop personalised exporters for our applications by following the guidelines and best practices documented... 
 
 
 ## Integrating metrics
