@@ -15,6 +15,8 @@ Metrics are numeric measurements
 
 ## Instrumenting code
 In order for Prometheus to scrape metrics from a service, the service must satisfy the format and structure needed to export the metrics to prometheus.
+![Prom drawio](https://user-images.githubusercontent.com/69111235/185801764-8b2e848b-57bc-4ac5-a962-a369da902933.png)
+
 
 ## Exporters
 
