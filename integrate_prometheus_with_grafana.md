@@ -1,5 +1,18 @@
 # Prometheus and Grafana
 
+Prometheus is an open-source monitoring and alerting system which collects the data to understand and predict the behaviour of your application. 
+Remember: Prometheus stores the collected data(metrics) in the form of time-series data.
+
+Grafana, also an open-source software, helps in visualising the (Prometheus) data exposed into different visuals like graphs, histograms,tables etc. We use Grafana's dashboard to generate visuals and query the data. Grafana 
+
+### what exactly are metrics ?
+Metrics are nothing but numbers that are measurements of any entity. In tech-field this entity can be your application, hardware, power usage etc.
+
+In MacOS open Activity monitor and for Windows open task-manager. The numbers you see in front of the list of every application are nothing but the metrics.
+
+Note: In Prometheus and Grafana we consider only the Time Series database(TSDB) metrics.
+
+
 ## Installation using docker
 Prometheus:- `docker run -p 9090:9090 prom/prometheus`
 Grafana:-`docker run -d -p 3000:3000 grafana/grafana-enterprise`
