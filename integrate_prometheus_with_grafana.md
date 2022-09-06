@@ -72,7 +72,7 @@ Configure the data-source of prometheus with the grafana service so that grafana
 
 Steps
 Create new data source
-under http url enter http://*your_ip_address*:9115
+under http url enter http://*your_ip_address*:9115 or http://localhost:9115
 Save
 
 
