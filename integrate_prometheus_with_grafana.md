@@ -6,7 +6,7 @@ Remember: Prometheus stores the collected data(metrics) in the form of time-seri
 Grafana, also an open-source software, helps in visualising the (Prometheus) data exposed into different visuals like graphs, histograms,tables etc. We use Grafana's dashboard to generate visuals and query the data. Grafana 
 
 ### what exactly are metrics ?
-Metrics are nothing but numbers that are measurements of any entity. In tech-field this entity can be your application, hardware, power usage etc.
+Metrics in simple terms are measurements. In tech-field this entity can be your application, hardware, power usage etc.
 
 In MacOS open Activity monitor and for Windows open task-manager. The numbers you see in front of the list of every application are nothing but the metrics.
 
