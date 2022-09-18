@@ -78,4 +78,4 @@ Save
 
 ## Creating Dashboard to visualise metrics
 Steps
-
+Step1: Open the port you've exposed grafana to
